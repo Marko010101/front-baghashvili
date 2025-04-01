@@ -32,7 +32,7 @@ const StyledMenu = styled.nav`
   border-top: 1px solid var(--color-light-gray);
   border-bottom: 1px solid var(--color-light-gray);
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     border-bottom: none;
   }
 `;
@@ -41,7 +41,7 @@ const MenuList = styled(Row)`
   gap: 3.2rem;
   padding-top: 2.15rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     flex-direction: column;
     padding: 2.95rem 2rem 0;
     align-items: start;
@@ -59,7 +59,7 @@ const MenuItem = styled.li`
     padding: 2rem;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     padding-bottom: 0rem;
     width: 100%;
     &:first-child {

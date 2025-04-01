@@ -19,7 +19,7 @@ const Submenu = ({ item }) => {
               {subItem.submenu.map((nestedItem, nestedIndex) => (
                 <SubmenuItem key={nestedIndex}>
                   <SubmenuLink as={nestedItem.href ? "a" : "button"} href={nestedItem.href}>
-                    {nestedItem.label}
+                    <span> {nestedItem.label}</span>
                   </SubmenuLink>
                 </SubmenuItem>
               ))}
@@ -43,6 +43,7 @@ const StyledSubmenu = styled.ul`
   width: 17.6rem;
   z-index: 100;
   border: 1px solid var(--color-light-gray);
+  background-color: var(--color-white);
 
   @media (max-width: 768px) {
     position: sticky;

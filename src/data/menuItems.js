@@ -2,29 +2,29 @@ export const menuItems = [
   {
     label: "Demos",
     submenu: [
-      { label: "Dashboard Overview", href: "/dashboard" },
+      { label: "Dashboard Overview", href: "#" },
       {
         label: "User Management",
-        href: "/profile",
+        href: "#",
         submenu: [
-          { label: "Edit Profile", href: "/profile/edit" },
-          { label: "Account Settings", href: "/profile/settings" },
+          { label: "Edit Profile", href: "#" },
+          { label: "Account Settings", href: "#" },
         ],
       },
-      { label: "System Preferences", href: "/settings" },
+      { label: "System Preferences", href: "#" },
     ],
   },
   {
     label: "Post",
     submenu: [
-      { label: "Create New Post", href: "/post/new" },
-      { label: "Manage Posts", href: "/post/manage" },
+      { label: "Create New Post", href: "#" },
+      { label: "Manage Posts", href: "#" },
       {
         label: "Content Strategy",
-        href: "/post/strategy",
+        href: "#",
         submenu: [
-          { label: "SEO Optimization", href: "/post/seo" },
-          { label: "Engagement Analytics", href: "/post/analytics" },
+          { label: "SEO Optimization", href: "#" },
+          { label: "Engagement Analytics", href: "#" },
         ],
       },
     ],
@@ -32,26 +32,26 @@ export const menuItems = [
   {
     label: "Features",
     submenu: [
-      { label: "Advanced Search", href: "/features/search" },
-      { label: "AI-powered Suggestions", href: "/features/ai" },
-      { label: "Collaborative Tools", href: "/features/collaboration" },
+      { label: "Advanced Search", href: "#" },
+      { label: "AI-powered Suggestions", href: "#" },
+      { label: "Collaborative Tools", href: "#" },
     ],
   },
   {
     label: "Categories",
     submenu: [
-      { label: "Technology", href: "/categories/technology" },
-      { label: "Design & Creativity", href: "/categories/design" },
-      { label: "Business & Strategy", href: "/categories/business" },
+      { label: "Technology", href: "#" },
+      { label: "Design & Creativity", href: "#" },
+      { label: "Business & Strategy", href: "#" },
     ],
   },
   {
     label: "Shop",
     submenu: [
-      { label: "Digital Products", href: "/shop/digital" },
-      { label: "Exclusive Bundles", href: "/shop/bundles" },
-      { label: "Subscription Plans", href: "/shop/subscriptions" },
+      { label: "Digital Products", href: "#" },
+      { label: "Exclusive Bundles", href: "#" },
+      { label: "Subscription Plans", href: "#" },
     ],
   },
-  { label: "Buy Now", href: "/purchase" },
+  { label: "Buy Now", href: "#" },
 ];

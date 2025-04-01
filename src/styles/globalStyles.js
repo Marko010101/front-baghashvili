@@ -2,17 +2,14 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
 
-/* @font-face {
-    font-family: "Fredoka One";
-    src: url("/src/assets/fonts/FredokaOne-Regular.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-  } */
-
 :root {
   --color-white: #FFFFFF;
   --color-light-gray: #E9E9E9;
   --color-medium-gray: #969696;
+  --color-gray: #9B9B9B;
+  --color-dark-gray:#929292;
+  --color-slate: #4A4A4A;
+  --color-red: #EB0028;
   --color-black: #000000;
 
 
@@ -28,7 +25,7 @@ const GlobalStyles = createGlobalStyle`
   --font-size-nano: 1rem;
   --font-size-micro: 1.2rem;
   --font-size-mini: 1.3rem;
-  --font-size-medium-small: 1.5rem;
+  --font-size-medium-small: 1.4rem;
   --font-size-tiny: 1.6rem;
   --font-size-small: 1.8rem;
   --font-size-medium: 2rem;
@@ -70,6 +67,8 @@ select {
 
 button {
   cursor: pointer;
+  border: none; 
+  background: none;
 }
 
 *:disabled {
