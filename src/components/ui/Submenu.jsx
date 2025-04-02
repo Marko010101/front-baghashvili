@@ -103,10 +103,20 @@ const NestedSubmenu = styled.ul`
   display: none;
   position: absolute;
   background-color: var(--color-white);
-  left: 99%;
-  top: 1rem;
+  left: 100%;
   border: 1px solid var(--color-light-gray);
   padding: 2rem;
   min-width: 17.6rem;
   margin: 0;
+  top: 0.8rem;
+
+  ${SubmenuItem}:first-of-type > & {
+    top: 0;
+  }
+
+  @media (max-width: 1024px) {
+    ${SubmenuItem}:first-of-type > & {
+      top: 0.8rem;
+    }
+  }
 `;

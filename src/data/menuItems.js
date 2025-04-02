@@ -7,8 +7,22 @@ export const menuItems = [
         label: "User Management",
         href: "#",
         submenu: [
-          { label: "Edit Profile", href: "#" },
-          { label: "Account Settings", href: "#" },
+          {
+            label: "Edit Profile",
+            href: "#",
+            submenu: [
+              { label: "Change Avatar", href: "#" },
+              { label: "Update Bio", href: "#" },
+            ],
+          },
+          {
+            label: "Account Settings",
+            href: "#",
+            submenu: [
+              { label: "Privacy", href: "#" },
+              { label: "Notifications", href: "#" },
+            ],
+          },
         ],
       },
       { label: "System Preferences", href: "#" },
@@ -17,14 +31,44 @@ export const menuItems = [
   {
     label: "Post",
     submenu: [
-      { label: "Create New Post", href: "#" },
-      { label: "Manage Posts", href: "#" },
       {
-        label: "Content Strategy",
+        label: "Post Header",
         href: "#",
         submenu: [
-          { label: "SEO Optimization", href: "#" },
-          { label: "Engagement Analytics", href: "#" },
+          { label: "Title Settings", href: "#" },
+          { label: "Metadata Options", href: "#" },
+        ],
+      },
+      {
+        label: "Post Layout",
+        href: "#",
+        submenu: [
+          { label: "Single Column", href: "#" },
+          { label: "Two Columns", href: "#" },
+        ],
+      },
+      {
+        label: "Share Buttons",
+        href: "#",
+        submenu: [
+          { label: "Social Platforms", href: "#" },
+          { label: "Customization", href: "#" },
+        ],
+      },
+      {
+        label: "Gallery Post",
+        href: "#",
+        submenu: [
+          { label: "Image Slideshow", href: "#" },
+          { label: "Grid Layout", href: "#" },
+        ],
+      },
+      {
+        label: "Video Post",
+        href: "#",
+        submenu: [
+          { label: "Embed Options", href: "#" },
+          { label: "Autoplay Settings", href: "#" },
         ],
       },
     ],
@@ -32,7 +76,14 @@ export const menuItems = [
   {
     label: "Features",
     submenu: [
-      { label: "Advanced Search", href: "#" },
+      {
+        label: "Advanced Search",
+        href: "#",
+        submenu: [
+          { label: "Filter Options", href: "#" },
+          { label: "Saved Searches", href: "#" },
+        ],
+      },
       { label: "AI-powered Suggestions", href: "#" },
       { label: "Collaborative Tools", href: "#" },
     ],
@@ -40,15 +91,36 @@ export const menuItems = [
   {
     label: "Categories",
     submenu: [
-      { label: "Technology", href: "#" },
-      { label: "Design & Creativity", href: "#" },
+      {
+        label: "Technology",
+        href: "#",
+        submenu: [
+          { label: "Web Development", href: "#" },
+          { label: "Artificial Intelligence", href: "#" },
+        ],
+      },
+      {
+        label: "Design & Creativity",
+        href: "#",
+        submenu: [
+          { label: "Graphic Design", href: "#" },
+          { label: "UI/UX", href: "#" },
+        ],
+      },
       { label: "Business & Strategy", href: "#" },
     ],
   },
   {
     label: "Shop",
     submenu: [
-      { label: "Digital Products", href: "#" },
+      {
+        label: "Digital Products",
+        href: "#",
+        submenu: [
+          { label: "E-books", href: "#" },
+          { label: "Templates", href: "#" },
+        ],
+      },
       { label: "Exclusive Bundles", href: "#" },
       { label: "Subscription Plans", href: "#" },
     ],

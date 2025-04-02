@@ -63,6 +63,15 @@ const MenuItem = styled.li`
     padding-bottom: 0rem;
     width: 100%;
     cursor: pointer;
+
+    &:first-child > ul {
+      top: 2rem;
+    }
+
+    & > ul {
+      top: 3.6rem;
+    }
+
     &:first-child {
       padding-bottom: 1.6rem;
       padding-top: 0;
