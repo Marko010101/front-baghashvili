@@ -6,7 +6,7 @@ import ArrowDown from "../assets/ArrowDown.svg?react";
 
 import { menuItems } from "../data/menuItems.js";
 import Row from "./ui/Row.jsx";
-import Submenu from "./ui/SubMenu.jsx";
+import Submenu from "./ui/Submenu.jsx";
 
 const Menu = () => {
   return (
