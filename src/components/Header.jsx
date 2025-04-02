@@ -1,8 +1,9 @@
 // components/Header.jsx
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
-import MenuSvg from "../assets/Menu.svg?react";
 import Logo from "../assets/Logotype.png";
+import MenuSvg from "../assets/Menu.svg?react";
 import useDeviceType from "../hooks/useDeviceType";
 import Menu from "./Menu.jsx";
 import Input from "./ui/Input.jsx";
@@ -10,10 +11,12 @@ import MobileMenu from "./ui/MobileMenu.jsx";
 
 const Header = () => {
   const device = useDeviceType();
-  const SmallScreen = device === "tablet" || device === "mobile";
+  const isSmallScreen = device === "tablet" || device === "mobile";
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isHidden, setIsHidden] = useState(false);
+
+  console.log(isSmallScreen);
 
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
   const closeMenu = () => setIsMenuOpen(false);
@@ -21,7 +24,6 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      console.log(currentScrollY);
       if (currentScrollY > lastScrollY && currentScrollY > 200) {
         setIsHidden(true);
       } else {
@@ -39,20 +41,22 @@ const Header = () => {
     <>
       <StyledHeader $isHidden={isHidden}>
         <LogoAndSearch>
-          {SmallScreen && (
+          {isSmallScreen && (
             <MenuButton onClick={toggleMenu} aria-label="Toggle menu">
               <MenuSvg />
             </MenuButton>
           )}
-          <LogoImage src={Logo} alt="Company Logo" />
+          <LogoLink to="/">
+            <img src={Logo} alt="Company Logo" />
+          </LogoLink>
           <SearchContainer>
             <Input />
           </SearchContainer>
         </LogoAndSearch>
-        {!SmallScreen && <Menu />}
+        {!isSmallScreen && <Menu />}
       </StyledHeader>
 
-      {SmallScreen && (
+      {isSmallScreen && (
         <MobileMenu isOpen={isMenuOpen} onClose={closeMenu}>
           <Menu />
         </MobileMenu>
@@ -93,12 +97,14 @@ const LogoAndSearch = styled.div`
   }
 `;
 
-const LogoImage = styled.img`
+const LogoLink = styled(Link)`
   grid-column: 2;
 
   @media (max-width: 768px) {
-    width: 16.3rem;
-    justify-self: center;
+    & img {
+      width: 16.3rem;
+      justify-self: center;
+    }
   }
 `;
 

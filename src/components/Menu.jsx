@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 import ArrowDown from "../assets/ArrowDown.svg?react";
@@ -13,7 +14,7 @@ const Menu = () => {
       <MenuList as="ul" type="horizontal">
         {menuItems.map((item, index) => (
           <MenuItem key={index}>
-            <MenuElement type="horizontal" as={item.href ? "a" : "button"} href={item.href}>
+            <MenuElement type="horizontal" as={item.href ? Link : "button"} href={item.href}>
               {item.label}
               {item.submenu && <ArrowIcon as={ArrowDown} type="horizontal" />}
             </MenuElement>
@@ -52,7 +53,6 @@ const MenuList = styled(Row)`
 const MenuItem = styled.li`
   position: relative;
   padding-bottom: 1.95rem;
-
   &:hover > ul {
     display: flex;
     flex-direction: column;
@@ -62,6 +62,7 @@ const MenuItem = styled.li`
   @media (max-width: 1024px) {
     padding-bottom: 0rem;
     width: 100%;
+    cursor: pointer;
     &:first-child {
       padding-bottom: 1.6rem;
       padding-top: 0;

@@ -3,13 +3,14 @@ import styled from "styled-components";
 
 import ArrowRight from "../../assets/ArrowRight.svg?react";
 import Row from "./Row.jsx";
+import { Link } from "react-router-dom";
 
 const Submenu = ({ item }) => {
   return (
     <StyledSubmenu>
       {item.submenu.map((subItem, subIndex) => (
         <SubmenuItem key={subIndex}>
-          <SubmenuLink as={subItem.href ? "a" : "button"} href={subItem.href}>
+          <SubmenuLink as={subItem.href ? Link : "button"} href={subItem.href}>
             <span>{subItem.label}</span>
             {subItem.submenu && <Row as={ArrowRight} />}
           </SubmenuLink>
@@ -34,6 +35,7 @@ const Submenu = ({ item }) => {
 export default Submenu;
 
 const StyledSubmenu = styled.ul`
+  cursor: auto;
   display: none;
   position: absolute;
   top: 3.6rem;
@@ -86,6 +88,7 @@ const SubmenuLink = styled.button`
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
+  line-height: 100%;
 
   &:hover {
     & > span {
@@ -96,6 +99,7 @@ const SubmenuLink = styled.button`
 `;
 
 const NestedSubmenu = styled.ul`
+  cursor: auto;
   display: none;
   position: absolute;
   background-color: var(--color-white);

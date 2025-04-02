@@ -10,6 +10,7 @@ const GlobalStyles = createGlobalStyle`
   --color-dark-gray:#929292;
   --color-slate: #4A4A4A;
   --color-red: #EB0028;
+  --color-yellow:rgb(255, 245, 160);
   --color-black: #000000;
 
 
