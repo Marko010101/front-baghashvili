@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 import ArrowDown from "../assets/ArrowDown.svg?react";
-import Submenu from "./ui/SubMenu.jsx";
 
 import { menuItems } from "../data/menuItems.js";
 import Row from "./ui/Row.jsx";
+import Submenu from "./ui/SubMenu.jsx";
 
 const Menu = () => {
   return (
