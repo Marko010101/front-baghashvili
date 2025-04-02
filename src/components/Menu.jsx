@@ -99,6 +99,7 @@ const MenuElement = styled(Row)`
   gap: 0.4rem;
   font-weight: var(--font-weight-medium);
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 
   &:hover > ul {
     display: block;

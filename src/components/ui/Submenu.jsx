@@ -89,7 +89,7 @@ const SubmenuLink = styled.button`
   justify-content: space-between;
   cursor: pointer;
   line-height: 100%;
-
+  -webkit-tap-highlight-color: transparent;
   &:hover {
     & > span {
       padding-left: 0.8rem;
@@ -109,6 +109,7 @@ const NestedSubmenu = styled.ul`
   min-width: 17.6rem;
   margin: 0;
   top: 0.8rem;
+  -webkit-tap-highlight-color: transparent;
 
   ${SubmenuItem}:first-of-type > & {
     top: 0;
